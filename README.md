@@ -1,4 +1,5 @@
 # Angularapp
+El proyecto trata sobre un juego de ahorcado, las palabras estan randomizadas con JavaScript.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 
