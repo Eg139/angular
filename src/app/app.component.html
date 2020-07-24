@@ -1,0 +1,40 @@
+<div class="row">
+  <h3>Letras usadas: {{letraUsada}}</h3>
+</div>
+
+<div class="row">
+  <div class="col text-center">
+  <img src="assets/img/{{intentos}}.png" class="ahorcado-img">
+  <h3>Intentos <small> {{ intentos }}/9</small></h3>
+</div>
+</div>
+
+<div class="row">
+  <div class="col text-center">
+    <h1>{{ palabraOculta }}</h1>
+</div>
+</div>
+
+<div class="row" *ngIf="ganar">
+  <div class="col text-center">
+    <h1>Felicidades Ganaste!!!!</h1>
+    <h4>:D</h4>
+</div>
+</div>
+
+<div class="row" *ngIf="perdio">
+  <div class="col text-center">
+    <h1>Lo siento, perdiste :(</h1>
+    <h4>La palabra correcta era: {{palabra[this.nivel]}}</h4>
+</div>
+</div>
+
+<div class="row" *ngIf="!ganar && !perdio">
+  <div class="col text-center">
+
+    <button (click)="comprobar(letra)" *ngFor="let letra of letras" class="btn btn-secondary">
+      {{ letra }}
+    </button>
+
+</div>
+</div>
